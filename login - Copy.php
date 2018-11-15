@@ -2,13 +2,11 @@
 <html lang="en">
 
     
-<?php
-
- include($_SERVER['a-dukhiel.com'].'../source/head.php'; ?>
+<?php include'source/head.php'; ?>
   <body>
       
     <!-- Navigation -->
-<?php include($_SERVER['a-dukhiel.com'].'../source/nav.php'; ?>
+<?php include 'source/nav.php'; ?>
 
  <!-- Start Edit  -->
 
@@ -18,7 +16,7 @@
       
     <!-- Stop -->
     <!-- Footer -->
-<?php include($_SERVER['a-dukhiel.com'].'../source/footer.php'; ?>
+<?php include'source/footer.php'; ?>
 
 
        
