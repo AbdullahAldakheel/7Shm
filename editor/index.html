@@ -15,7 +15,16 @@
 
     <!-- Custom styles for this template -->
     <link href="../css/thumbnail-gallery.css" rel="stylesheet">
+      
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+      </script>
 
+      
+      <style>
+      .pos{
+    position: relative;
+      }
+      </style>
   </head>
 
   <body>
@@ -48,76 +57,35 @@
       </div>
     </nav>
 
-    <!-- Page Content -->
+    <!-- Page Content -->//
     <div class="container">
 
-      <h1 class="my-4 text-center text-lg-left">Thumbnail Gallery</h1>
+   <h1 class="my-4 text-center text-lg-center" >Editor</h1> 
 
-      <div class="row text-center text-lg-left">
+     <!-- <div class="row text-center text-lg-left"> -->
 
-        <div class="col-lg-3 col-md-4 col-xs-6">
+        <div class="col-lg-4 col-md-4 col-xs-5">
+            
           <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
+            <img class="img-fluid img-thumbnail"  src="http://placehold.it/400x300" alt="" >
           </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-          </a>
-        </div>
+              <input type="submit" value="Approve" style="background-color: silver, paleturquoise">
+            <input type="button" value="Comment" name="comment" style="background-color: silver, paleturquoise">
+            <input id = "field" type="text" name="field">
+       <!-- </div> -->
       </div>
 
     </div>
+      
+      <script>
+          //here the field didn't dissapear.
+          $("field").hide();
+          
+          //$("comment").on('click', 'input[type=button]', function(){
+         //     var value = $(this).attr('value');
+   // $("comment-field").val($("comment-field").val() + value);
+   //       });
+      </script>
     <!-- /.container -->
 
     <!-- Footer -->
