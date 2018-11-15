@@ -6,7 +6,18 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+      <script>
+                $("input").focus(function(){   
+                            $(this).css("background-color", "#cccccc");
+                        });
+          
+                $("input").blur(function(){   
+                            $(this).css("background-color", "#ffffff");
+                        });
+      
+      </script>
+        
+        
      <?php include'refreshTime.php'; ?>
 
  
