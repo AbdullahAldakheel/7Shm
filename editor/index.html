@@ -21,9 +21,18 @@
 
       
       <style>
-      .pos{
-    position: relative;
+      .cont{
+          border: 5px solid red;
+          margin-top: 50px;
+            margin-bottom: 50px;
       }
+          #pos{
+              text-align: center; 
+          }  
+          input{
+              margin-bottom: 5px;  
+          }
+          
       </style>
   </head>
 
@@ -58,33 +67,40 @@
     </nav>
 
     <!-- Page Content -->//
-    <div class="container">
-
-   <h1 class="my-4 text-center text-lg-center" >Editor</h1> 
-
+     
+   <!-- <div class="container"> -->
+        <div class ="cont">
+            
+  <!-- <h1 class="my-4 text-center text-lg-center" style="color: darkblue" >Editor's Page</h1> -->
+            <h1 id="pos" style="color: darkblue" >Editor's Page</h1>
      <!-- <div class="row text-center text-lg-left"> -->
-
-        <div class="col-lg-4 col-md-4 col-xs-5">
+        
+      <!--  <div class="col-lg-4 col-md-4 col-xs-5"> -->
             
           <a href="#" class="d-block mb-4 h-100">
             <img class="img-fluid img-thumbnail"  src="http://placehold.it/400x300" alt="" >
           </a>
-              <input type="submit" value="Approve" style="background-color: silver, paleturquoise">
-            <input type="button" value="Comment" name="comment" style="background-color: silver, paleturquoise">
-            <input id = "field" type="text" name="field">
+            
+            <input id ="app" type="submit" value="Approve" style="background-color: silver, paleturquoise">
+            <input id = "com" type="button" value="Comment" name="comment" style="background-color: silver, paleturquoise">
+            <textarea id="area" name="field" >Write your comment here</textarea>
        <!-- </div> -->
+    <!--  </div> -->
       </div>
-
-    </div>
+  <!--  </div> -->
       
       <script>
-          //here the field didn't dissapear.
-          $("field").hide();
+         $(document).ready(function(){
+              $("#area").hide();
+             $("#com").click(function(){
+              $("#area").show();
+                  $("#com").hide();
+                 $("#app").val("Submit");
+             });
+         });
+         
           
-          //$("comment").on('click', 'input[type=button]', function(){
-         //     var value = $(this).attr('value');
-   // $("comment-field").val($("comment-field").val() + value);
-   //       });
+         
       </script>
     <!-- /.container -->
 
