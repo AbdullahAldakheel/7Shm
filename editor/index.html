@@ -115,6 +115,7 @@
             <input id="com"  class="btn btn-primary" value="Comment" type="submit"  href="#">
             <textarea id="area" name="field" placeholder="Write your comment here" style="width: 400px" ></textarea>
             <input id="app"  class="btn btn-primary" value="Approve" type="submit"  href="#">
+            <input id="cancel"  class="btn btn-primary" value="Cancel" type="submit"  href="#">
         </div>
       </div>
      
@@ -145,11 +146,20 @@
       <script>
          $(document).ready(function(){
               $("#area").hide();
+              $("#cancel").hide();
              $("#com").click(function(){
-              $("#area").show();
+              $("#cancel").show();
+                  $("#area").show();
                   $("#com").hide();
                  $("#app").val("Submit");
              });
+             
+             $("#cancel").click(function(){
+                $("#area").hide();
+              $("#cancel").hide();
+                  $("#app").val("Approve");
+                 $("#com").show();
+             })
          });
          
           
