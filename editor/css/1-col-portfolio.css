@@ -11,10 +11,12 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
-      padding-bottom: 56px;
+
+
   }
 }
 
 .pagination {
   margin-bottom: 15px;
 }
+<!-- padding-bottom: 56px -->
