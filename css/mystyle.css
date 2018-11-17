@@ -1,0 +1,25 @@
+.formMiddle{
+    
+    
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+    
+}
+
+.formAll{
+        margin: auto;
+        width: auto;
+        padding: 10px;
+    
+}
+.error{
+  width: 92%; 
+  margin: 0px auto; 
+  padding: 10px; 
+  border: 1px solid #a94442; 
+  color: #a94442; 
+  background: #f2dede; 
+  border-radius: 5px; 
+  text-align: left;
+}
