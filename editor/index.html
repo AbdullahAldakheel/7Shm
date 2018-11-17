@@ -25,7 +25,7 @@
       <style>
       .cont{
           border: 0px solid white;
-         margin-bottom: 30px;
+       <!--  margin-bottom: 30px; -->
 
       }
           #pos{
@@ -54,7 +54,6 @@
               padding-top: 20px;
               padding-bottom: 20px;
               text-align: center;
-              
           }
      
       </style>
@@ -98,6 +97,7 @@
       <h1 class="pad">Editor's page</h1>
           <div class="cont">
       <!-- Project One -->
+          
       <div class="row">
         <div class="col-md-6">
           <a href="#">
@@ -109,61 +109,52 @@
           <p style="font-size: 100px">SHIT</p>
             <span style="margin-left: 5px">Editor's Name</span>
             <br>
-            <input id="com"  class="btn btn-primary" value="Comment" type="submit"  href="#">
-            <textarea id="area" name="field" placeholder="Write your comment here" style="width: 400px" ></textarea>
-            <input id="app"  class="btn btn-primary" value="Approve" type="submit"  href="#">
-            <input id="cancel"  class="btn btn-primary" value="Cancel" type="submit"  href="#">
+           <form>
+            <input class="com btn btn-primary" value="Comment" type="button" href="#">
+            <textarea class="area" name="field" placeholder="Write your comment here" style="width: 400px" ></textarea>
+            <input class="app btn btn-primary" name="approve" value="Approve" type="submit"  href="#">
+            <input class="sub btn btn-primary" name="reject" value="Submit" type="submit"  href="#">
+             <input class="cancel btn btn-primary" value="Cancel" type="button"  href="#">
+            </form>
+           
+                
         </div>
       </div>
+              
+      
+                     
+              
           </div>
-   <!-- <div class="container"> 
-        <div class ="cont">-->
-            
-  <!-- <h1 class="my-4 text-center text-lg-center" style="color: darkblue" >Editor's Page</h1> 
-            <h1 id="pos" style="color: darkblue" >Editor's Page</h1>-->
-     <!-- <div class="row text-center text-lg-left"> -->
-        
-      <!--  <div class="col-lg-4 col-md-4 col-xs-5"> 
-      <div class="div1">
-          <a href="#">
-            <img class="img-fluid img-thumbnail"  src="http://placehold.it/400x300" alt="" >
-          </a>
-            <border class="border" >
-          <span id = "inline">dc</span>
-            <input id ="app" type="submit" value="Approve" style="background-color: silver, paleturquoise">
-            <input id = "com" type="button" value="Comment" name="comment" style="background-color: silver, paleturquoise">
-            <textarea id="area" name="field" placeholder="Write your comment here" ></textarea>
-          </border>-->
-       <!-- </div> -->
-    <!--  </div> 
-            </div>
-      </div>-->
-  <!--  </div> -->
+          </div>
+ 
       
       <script>
+          
          $(document).ready(function(){
-              $("#area").hide();
-              $("#cancel").hide();
-             $("#com").click(function(){
-              $("#cancel").show();
-                  $("#area").show();
-                  $("#com").hide();
-                 $("#app").val("Submit");
+             
+              $(".area").hide();
+              $(".cancel").hide();
+             $(".sub").hide();
+             $(".com").click(function(){
+              $(".cancel").show();
+                  $(".area").show();
+                 $(".sub").show();
+                  $(".com").hide();
+                 $(".app").hide();
              });
              
-             $("#cancel").click(function(){
-                $("#area").hide();
-              $("#cancel").hide();
-                  $("#app").val("Approve");
-                 $("#com").show();
-             })
+             $(".cancel").click(function(){
+                $(".area").hide();
+              $(".cancel").hide();
+                  $(".app").show();
+                 $(".sub").hide();
+                 $(".com").show();
+             });
          });
-         
-          
-         
       </script>
-      </div>
-    </body>
+          
+       </body>
+   
     
     <!-- /.container -->
 
