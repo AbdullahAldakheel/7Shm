@@ -27,12 +27,38 @@
     background-color: #008CBA;
     color: white;
 }
+            body{ background:#728EB2; color:#FFF; }
+/*( 'box-sizing' will not work with this code )*/
+            input{
+                border:6px solid #556677;
+            }
+textarea{  
+  /* box-sizing: padding-box; */
+  overflow:hidden;
+  /* demo only: */
+  padding:10px;
+  width:250px;
+  font-size:14px;
+  margin:50px auto;
+  display:block;
+  border-radius:10px;
+  border:6px solid #556677;
+}
+
+	
+}
       </style>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+      <script>
+          function auto_grow(element) {
+    element.style.height = "5px";
+    element.style.height = (element.scrollHeight)+"px";
+}
+      </script>
 
     <title>Add</title>
 
@@ -74,15 +100,9 @@
       </div>
     </nav>
 
-      <script>
-    $("#bt1").click(function(){
-       $("#fn").show();
-  $("#ln").show();
-    });
-      </script>
     <!-- Page Content -->
     <div class="container">
-    </div>
+    
 
       <!-- Page Heading -->
       <h1 class="my-4">Add
@@ -93,16 +113,21 @@
  <body>
  <form name="myForm" action="/action_page.php"
 onsubmit="return validateForm()" method="post">
-Title <input type="text" placeholder="Insert title here" name="fname">
+
+Title <br>
+     <input type="text" placeholder="Insert title here">
      <br>
-     Image link  <input type="file" name="files[]" multiple>
-        <input type="submit" class="button button2" value="Upload File" name="submit"><script src="upload.js"></script>
      <br>
      Article body 
-     
-     <textarea id="area" name="field" placeholder="Write the article here" style="width: 400px" ></textarea>
+     <textarea onkeyup="auto_grow(this)" name="field" placeholder="Write the article here" style="width: 800px" ></textarea>
+     <br>
+     Image link  
+     <br /><input type="file" name="files[]" multiple>
+     <script src="upload.js"></script>
+     <br>
      <br>
 <input type="submit" class="button button2" value="Submit">
+    
 </form>
 
 
@@ -111,6 +136,7 @@ Title <input type="text" placeholder="Insert title here" name="fname">
 
   
  </body>
+        </div>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
