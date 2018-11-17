@@ -25,6 +25,7 @@
  
           function myFunction() {
     document.getElementById("myP").contentEditable = true;
+    document.getElementById("myH").contentEditable = true;
 }
       </script>
   </head>
@@ -81,6 +82,7 @@ table, th, td {
   <tr class="n">
     <th>ID</th>
     <th>Name</th> 
+    <th>Password</th>  
     <th>Type</th>
     <th>Edit</th>
     <th>Remove</th>    
@@ -89,7 +91,8 @@ table, th, td {
   <tr class="n">
     <td></td>
     <td id="myP">Abdullah</td>
-    <td></td>
+    <td id="myH">63254836478</td>
+    <td></td>  
     <td button onclick="myFunction()" class="button2">Edit</td>
     <td button onClick="clic(this)" class="button2">Remove</td>  
   </tr>
