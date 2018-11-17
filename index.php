@@ -1,8 +1,22 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+
+  }
+  if (!isset($_SESSION['type'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+    unset($_SESSION['type']);
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
-<?php
-$name = "pault";
-?>
+
     
 <?php include'source/head.php'; ?>
   <body>
