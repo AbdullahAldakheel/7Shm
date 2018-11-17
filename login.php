@@ -1,3 +1,4 @@
+<?php include('users/server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,27 +10,40 @@
 <?php include 'source/nav.php'; ?>
 
  <!-- Start Edit  -->
+      <div class="formMiddle" >
       
-<h1>Log in ..</h1>      
+      <h1 class="formAll">Log in ..</h1>      
       
-<p>  please enter your username and password  </p>
+<p class="formAll">  please enter your username and password  </p>
       
-      <form method="post" action="users/form.php" >
-      
+      <form method="post" action="login.php" class="formAll">
+          <?php include('users/errors.php'); ?>
       
         <div>
-          <label>Name: </label>
-          <input type="text" name="user" required>  
+          <label>Name    : </label>
+          <input type="text" name="username"  class="form-control" required>  
         </div>
       
         <div>
           <label>Password: </label>
-          <input type="password" name="pass" required>  
+          <input type="password" name="password" class="form-control" required>  
         </div>
-      
-          <p><input type="submit" name="submit" value="Log In"></p>
+          <br>
+        <div>
+          
+                    <p><input type="submit" name="login_user" class="btn btn-secondary"  value="Log In"></p>
+          </div>
+
       
       </form>
+      
+      
+      
+      
+      
+      
+      </div>
+
       
       
       

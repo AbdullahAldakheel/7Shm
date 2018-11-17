@@ -54,9 +54,22 @@
 
           <!-- Side Widget -->
           <div class="card my-4">
-            <h5 class="card-header"> <?php print(" Welcome : $name! "); ?> </h5>
+            <h5 class="card-header"> Welcome </h5>
             <div class="card-body">
-               <?php print($name); ?> new Bootstrap 4 card containers!
+                   <?php  if (isset($_SESSION['username'])) : ?>
+    	       <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong>  
+                   
+                   
+                   <?php  if (isset($_SESSION['type'])) : ?>
+    	       You Are a <?php echo $_SESSION['type']; ?>
+             
+                <?php endif ?>
+                
+                .
+                </p>
+                <p> <a href="index.php?logout='1'" >logout</a> </p>
+                <?php endif ?>
+                
             </div>
           </div>
 
