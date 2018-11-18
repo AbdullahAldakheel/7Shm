@@ -30,14 +30,29 @@
             .zobda{
                  padding: 70px;
             }
+            .bbbb {
+  position: relative;
+  top: -40px;
+  left: 94px;
+}
+            }
       </style>
       <script>
     function myFunction() {
     document.getElementById("myP").contentEditable = true;
+    document.getElementById("myP1").contentEditable = true;
+    document.getElementById("myb").disabled = false;
 }
           function clic(element)
 {
-  confirm("Are you sure you want to delete");
+ var x = confirm("Are you sure you want to delete");
+    var txt;
+       if (x == true) {
+        txt = "You pressed OK!";
+    } else {
+        txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;
 }
       </script>
 
@@ -108,16 +123,18 @@
              
              <p id="myP">Title</p>
 
-          <p id="myP">Body</p>
-            
-
-          <input type="submit" class="button button2" value="Submit">
-               <button  id="bt1" type="submit" disabled onclick="myFunction()" class="button button2">Edit</button>
-        <button id="bt2" type="submit" disabled onClick="clic(this)" class="button button2">Delete</button>
-          
-            </form>
+          <p id="myP1">Body</p>
              
-                  
+            <p>Insert editor comments here</p>
+
+          <input type="submit" id="myb" class="button button2" value="Submit" disabled>
+           
+            </form>
+        <div class=bbbb>
+        <button  id="bt1"  onclick="myFunction()" class="button button2">Edit</button>
+        <button id="bt2"  onClick="clic(this)" class="button button2">Delete</button>
+          </div>
+            <p id="demo"></p>
             
                
         </div>
