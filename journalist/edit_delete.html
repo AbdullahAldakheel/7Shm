@@ -103,12 +103,22 @@
         </div>
         <div class="col-md-5">
             
-         
-          <p id="myP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-            <p>editor text is here</p>
+         <form name="myForm" action="/action_page.php"
+               onsubmit="return validateForm()" method="post">
+             
+             <p id="myP">Title</p>
+
+          <p id="myP">Body</p>
             
-          <button  id="bt1" onclick="myFunction()" class="button button2">Edit</button>
-        <button id="bt2" onClick="clic(this)" class="button button2">Delete</button>
+
+          <input type="submit" class="button button2" value="Submit">
+               <button  id="bt1" type="submit" disabled onclick="myFunction()" class="button button2">Edit</button>
+        <button id="bt2" type="submit" disabled onClick="clic(this)" class="button button2">Delete</button>
+          
+            </form>
+             
+                  
+            
                
         </div>
       </div>
