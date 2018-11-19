@@ -2,77 +2,22 @@
 <html lang="en">
 
   <head>
-        <style>
-           .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 2px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-.button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-}
-
-.button2:hover {
-    background-color: #008CBA;
-    color: white;
-}
-            body{ background:#728EB2; color:#FFF; }
-/*( 'box-sizing' will not work with this code )*/
-            input{
-                border:6px solid #556677;
-            }
-textarea{  
-  /* box-sizing: padding-box; */
-  overflow:hidden;
-  /* demo only: */
-  padding:10px;
-  width:250px;
-  font-size:14px;
-  margin:50px auto;
-  display:block;
-  border-radius:10px;
-  border:6px solid #556677;
-}
-
-	
-}
-      </style>
-
+      
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-      <script>
-          function auto_grow(element) {
-    element.style.height = "5px";
-    element.style.height = (element.scrollHeight)+"px";
-}
-      </script>
 
     <title>Add</title>
-
-    <!-- Bootstrap core CSS -->
+    
+    <link href="Journalist Stylesheet.css" rel="stylesheet">
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="css/1-col-portfolio.css" rel="stylesheet">
-
+      
   </head>
-
- 
-
-    <!-- Navigation -->
+    
+  <body> 
+     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Start Bootstrap</a>
@@ -100,57 +45,46 @@ textarea{
       </div>
     </nav>
 
-    <!-- Page Content -->
+ 
     <div class="container">
-    
+        
+      
+      <h1 class="my-4">Add article</h1>
+        
 
-      <!-- Page Heading -->
-      <h1 class="my-4">Add
-       
-      </h1>
-
-      <!-- Project One -->
- <body>
  <form name="myForm" action="/action_page.php"
 onsubmit="return validateForm()" method="post">
 
-Title <br>
-     <input type="text" placeholder="Insert title here">
-     <br>
-     <br>
+     Article title<br>
+     <input type="text" maxlength="30" placeholder="Insert title here">
+     <br><br>
      Article body 
      <textarea onkeyup="auto_grow(this)" name="field" placeholder="Write the article here" style="width: 800px" ></textarea>
      <br>
-     Image  
+     upload image  
      <br /><input type="file" name="files[]" multiple>
      <script src="upload.js"></script>
-     <br>
-     <br>
+     <br><br>
      
-<input type="submit" class="button button2" value="Submit">
-     
-     
-    
+     <input type="submit" class="button" value="Submit">
 </form>
-
-
-      <!-- /.row -->
       <hr>
-
-  
- </body>
-        </div>
-    <!-- Footer -->
+      </div>
+</body>
+    
+    
+   
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
       </div>
-      <!-- /.container -->
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
+    
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Journalist%20js.js"></script>
+    
 </html>
 
  
