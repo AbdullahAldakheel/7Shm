@@ -25,7 +25,8 @@
       <style>
       .cont{
           border: 0px solid white;
-       <!--  margin-bottom: 30px; -->
+          margin-bottom: 30px;
+          
 
       }
           #pos{
@@ -95,9 +96,9 @@
 
       <!-- Page Heading -->
       <h1 class="pad">Editor's page</h1>
-          <div class="cont">
-      <!-- Project One -->
           
+      <!-- Project One -->
+          <div class="cont">
       <div class="row">
         <div class="col-md-6">
           <a href="#">
@@ -106,28 +107,32 @@
         </div>
         <div class="col-md-5" id="marg">
           <h3>Article 1</h3>
-          <p style="font-size: 100px">SHIT</p>
-            <span style="margin-left: 5px">Editor's Name</span>
+            <div id="bodydesc" style="margin-left:auto; margin-right:auto; width:960px; height: 200px; overflow-y: scroll;">
+                
+          <p id="desc" style="float:left;color: #666666; width:400px; font-family: Candara,Trebuchet MS,sans-serif; font-size: 12px; font-weight: bold; border-right: thin dotted #666666; line-height: 18px;">
+              Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test 
+                 </p>
+            </div>
+            <span style="margin-left: 5px">Jounalist's Name</span>
             <br>
            <form>
+               <!-- هذي الازرار -->
             <input class="com btn btn-primary" value="Comment" type="button" href="#">
             <textarea class="area" name="field" placeholder="Write your comment here" style="width: 400px" ></textarea>
             <input class="app btn btn-primary" name="approve" value="Approve" type="submit"  href="#">
             <input class="sub btn btn-primary" name="reject" value="Submit" type="submit"  href="#">
              <input class="cancel btn btn-primary" value="Cancel" type="button"  href="#">
             </form>
+            <!-- الى هنا -->
            
-                
+          </div>
         </div>
       </div>
-              
-      
-                     
+
               
           </div>
-          </div>
- 
-      
+      <!--  لا تجي هنا  -->
+      <!-- <input class="can" value="" type="text"  href="#"> -->
       <script>
           
          $(document).ready(function(){
@@ -149,7 +154,9 @@
                   $(".app").show();
                  $(".sub").hide();
                  $(".com").show();
+                 
              });
+             $(".can").blur().css("background-color","#cccccc");
          });
       </script>
           
