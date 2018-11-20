@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,46 +20,13 @@
       
        <link href="css/1-col-portfolio.css" rel="stylesheet">
       
+      <link href="Editor%20stylesheet.css" rel="stylesheet">
+      
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
       </script>
+      <script src="Editor%20js.js"></script>
 
       
-      <style>
-      .cont{
-          border: 0px solid white;
-          margin-bottom: 30px;
-          
-
-      }
-          #pos{
-              text-align: center; 
-          }  
-          input{
-              margin-bottom: 5px;  
-              margin-left: 5px;
-              margin-top: 5px;
-          }
-          
-          .div1 {
-    width: relative;
-    height: relative;
-    border: 1px solid blue;
-
-}
-          #inline{
-             align-content: center;
-          }
-          
-          #marg{
-              margin-bottom: 100px;
-          }
-          .pad{
-              padding-top: 20px;
-              padding-bottom: 20px;
-              text-align: center;
-          }
-     
-      </style>
   </head>
 
   <body>
@@ -117,48 +86,25 @@
             <br>
            <form>
                <!-- هذي الازرار -->
-            <input class="com btn btn-primary" value="Comment" type="button" href="#">
+            <input class="com btn btn-primary button" value="Comment" type="button" href="#">
             <textarea class="area" name="field" placeholder="Write your comment here" style="width: 400px" ></textarea>
-            <input class="app btn btn-primary" name="approve" value="Approve" type="submit"  href="#">
-            <input class="sub btn btn-primary" name="reject" value="Submit" type="submit"  href="#">
-             <input class="cancel btn btn-primary" value="Cancel" type="button"  href="#">
+            <input class="app btn btn-primary button" name="approve" value="Approve" type="submit"  href="#">
+            <input class="sub btn btn-primary button" name="reject" value="Submit" type="submit"  href="#">
+             <input class="cancel btn btn-primary button" value="Cancel" type="button"  href="#">
             </form>
             <!-- الى هنا -->
            
           </div>
+          
         </div>
+              <hr>
       </div>
 
               
           </div>
       <!--  لا تجي هنا  -->
       <!-- <input class="can" value="" type="text"  href="#"> -->
-      <script>
-          
-         $(document).ready(function(){
-             
-              $(".area").hide();
-              $(".cancel").hide();
-             $(".sub").hide();
-             $(".com").click(function(){
-              $(".cancel").show();
-                  $(".area").show();
-                 $(".sub").show();
-                  $(".com").hide();
-                 $(".app").hide();
-             });
-             
-             $(".cancel").click(function(){
-                $(".area").hide();
-              $(".cancel").hide();
-                  $(".app").show();
-                 $(".sub").hide();
-                 $(".com").show();
-                 
-             });
-             $(".can").blur().css("background-color","#cccccc");
-         });
-      </script>
+    
           
        </body>
    
