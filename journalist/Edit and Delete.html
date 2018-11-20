@@ -2,60 +2,25 @@
 <html lang="en">
 
   <head>
-        <style>
-            .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 2px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-.button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-}
-
-.button2:hover {
-    background-color: #008CBA;
-    color: white;
-}
-      </style>
-      <script>
-    function myFunction() {
-    document.getElementById("myP").contentEditable = true;
-}
-          function clic(element)
-{
-  confirm("Are you sure you want to delete");
-}
-      </script>
-
+  
+      
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>Edit and delete</title>
-
-    <!-- Bootstrap core CSS -->
+      
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      
+    <link href="Journalist Stylesheet.css" rel="stylesheet">
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="css/1-col-portfolio.css" rel="stylesheet">
 
   </head>
 
   <body>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Start Bootstrap</a>
@@ -83,47 +48,59 @@
       </div>
     </nav>
 
-    <!-- Page Content -->
+
     <div class="container">
-      </div>
-
-      <!-- Page Heading -->
-      <h1 class="my-4">Edit and delete
-      </h1>
-
-      <!-- Project One -->
+      <h1 class="my-4">Edit and delete</h1>
       <div class="row">
         <div class="col-md-7">
           <a href="#">
+              
             <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+              
           </a>
         </div>
         <div class="col-md-5">
-         
-          <p id="myP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-            <p>editor text is here</p>
             
-          <button  id="bt1" onclick="myFunction()" class="button button2">Edit</button>
-        <button id="bt2" onClick="clic(this)" class="button button2">Delete</button>
+         <form name="myForm" action="/action_page.php"
+               onsubmit="return validateForm()" method="post">
+             
+             <p id="myP" maxlength="30">Title</p>
+             <p id="myP1" onkeyup="auto_grow(this)" >Body</p>
+             <p>Insert editor comments here</p>
+             <p>Insert editor name here</p>
+            <input type="submit" id="myb" class="button" value="Submit" hidden>
+            <button id="bt2" type="submit" onClick="clic(this)" class="button">Delete</button>
+           
+          </form>
+            
+        <div class=bbbb>
+        <button id="bt1"  onclick="myFunction()" class="button">Edit</button>
+        <button id="bt3"  onclick="myFunction1()" class="button" hidden>Cancel</button>
+       
+          </div>
+            
+            <p id="demo"></p>
+            
         </div>
       </div>
-      <!-- /.row -->
+    
       <hr>
 
-
-    <!-- /.container -->
+    </div>
+   
 </body>
-    <!-- Footer -->
+  
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
       </div>
-      <!-- /.container -->
+      
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
+    
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Journalist%20js.js"></script>
 
   
 

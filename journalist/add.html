@@ -2,51 +2,22 @@
 <html lang="en">
 
   <head>
-        <style>
-           .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 2px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-.button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-}
-
-.button2:hover {
-    background-color: #008CBA;
-    color: white;
-}
-      </style>
-
+      
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>Add</title>
-
-    <!-- Bootstrap core CSS -->
+    
+    <link href="Journalist Stylesheet.css" rel="stylesheet">
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="css/1-col-portfolio.css" rel="stylesheet">
-
+      
   </head>
-
- 
-
-    <!-- Navigation -->
+    
+  <body> 
+     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Start Bootstrap</a>
@@ -74,54 +45,46 @@
       </div>
     </nav>
 
-      <script>
-    $("#bt1").click(function(){
-       $("#fn").show();
-  $("#ln").show();
-    });
-      </script>
-    <!-- Page Content -->
+ 
     <div class="container">
-    </div>
+        
+      
+      <h1 class="my-4">Add article</h1>
+        
 
-      <!-- Page Heading -->
-      <h1 class="my-4">Add
-       
-      </h1>
-
-      <!-- Project One -->
- <body>
  <form name="myForm" action="/action_page.php"
 onsubmit="return validateForm()" method="post">
-Title <input type="text" placeholder="Insert title here" name="fname">
-     <br>
-     Image link  <input type="file" name="files[]" multiple>
-        <input type="submit" class="button button2" value="Upload File" name="submit"><script src="upload.js"></script>
-     <br>
+
+     Article title<br>
+     <input type="text" maxlength="30" placeholder="Insert title here">
+     <br><br>
      Article body 
-     
-     <textarea id="area" name="field" placeholder="Write the article here" style="width: 400px" ></textarea>
+     <textarea onkeyup="auto_grow(this)" name="field" placeholder="Write the article here" style="width: 800px" ></textarea>
      <br>
-<input type="submit" class="button button2" value="Submit">
+     upload image  
+     <br /><input type="file" name="files[]" multiple>
+     <script src="upload.js"></script>
+     <br><br>
+     
+     <input type="submit" class="button" value="Submit">
 </form>
-
-
-      <!-- /.row -->
       <hr>
-
-  
- </body>
-    <!-- Footer -->
+      </div>
+</body>
+    
+    
+   
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
       </div>
-      <!-- /.container -->
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
+    
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Journalist%20js.js"></script>
+    
 </html>
 
  
