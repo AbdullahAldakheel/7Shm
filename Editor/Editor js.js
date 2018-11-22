@@ -1,23 +1,30 @@
-  $(document).ready(function(){
+  
+       $(document).ready(function(){
+            $(".area").hide();
+             $(".cancel").hide();
+            $(".sub").hide();
              
-              $(".area").hide();
-              $(".cancel").hide();
-             $(".sub").hide();
-             $(".com").click(function(){
-              $(".cancel").show();
-                  $(".area").show();
-                 $(".sub").show();
-                  $(".com").hide();
-                 $(".app").hide();
-             });
-             
-             $(".cancel").click(function(){
-                $(".area").hide();
-              $(".cancel").hide();
-                  $(".app").show();
-                 $(".sub").hide();
-                 $(".com").show();
-                 
-             });
-             $(".can").blur().css("background-color","#cccccc");
+
+           $(".com").click(function() {
+        $(this).next(".area").show();
+        $(this).next().next().next().next(".cancel").show();
+        $(this).next().next().next(".sub").show();
+        $(this).hide();
+        $(this).next().next(".app").hide();
+                   
+
+    });    
+
+
+             $(".cancel").click(function() {
+                     $(this).hide();
+                     $(this).prev().prev().prev(".area").hide();
+                     $(this).prev(".sub").hide();
+                     $(this).prev().prev(".app").show();
+                     $(this).prev().prev().prev().prev(".com").show();
+                     
+
+                    });    
+
          });
+
