@@ -5,26 +5,24 @@
   	$_SESSION['msg'] = "You must log in first";
 
   }
-$type = $_SESSION['type'];
-
   if (!isset($_SESSION['type'])) {
   	$_SESSION['msg'] = "You must log in first";
-
   }
- require_once __DIR__ . '/users/logout.php'; 
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+    unset($_SESSION['type']);
+  }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-<?php
-$name = "pault";
-?>
+
     
-<?php   require_once __DIR__ . '/source/head.php'; ?>
+<?php include'source/head.php'; ?>
   <body>
       
     <!-- Navigation -->
-<?php require_once __DIR__ . '/source/nav.php'; ?>
+<?php include 'source/nav.php'; ?>
 
  <!-- Page Content -->
 
@@ -42,7 +40,7 @@ $name = "pault";
           </h5>
 
           <!-- Blog Post -->
-          <?php require_once __DIR__ . '/source/post.php'; ?>
+          <?php include'source/post.php'; ?>
 
           <!-- Pagination -->
           <ul class="pagination justify-content-center mb-4">
@@ -57,7 +55,7 @@ $name = "pault";
         </div>
 
         <!-- Sidebar Widgets Column -->
-         <?php require_once __DIR__ . '/source/right.php'; ?>
+         <?php include'source/right.php'; ?>
 
       </div>
       <!-- /.row -->
@@ -65,7 +63,7 @@ $name = "pault";
     </div>
     <!-- /.container -->
     <!-- Footer -->
-<?php require_once __DIR__ . '/source/footer.php'; ?>
+<?php include'source/footer.php'; ?>
 
 
     <!-- JavaScript -->
