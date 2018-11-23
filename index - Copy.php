@@ -12,8 +12,6 @@ $type = $_SESSION['type'];
 
   }
  require_once __DIR__ . '/users/logout.php'; 
-include('users/publish.php');
-
 ?>
 
 <!DOCTYPE html>
