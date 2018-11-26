@@ -5,7 +5,7 @@ $username = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect();
+$db = mysqli_connect('a-dukhiel.com', 'adukhiel_Abo7Shm', '@Gu*c~zeM=w5', 'adukhiel_7shm');
     if (!$db) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
@@ -46,10 +46,7 @@ if (isset($_POST['reg_user'])) {
   	$query = "INSERT INTO users (username, password, type) 
   			  VALUES('$username', '$password', '$type')";
   	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
-  	$_SESSION['type'] = $type;
-  	$_SESSION['success'] = "You are now logged in";
-  	header('location: index.php');
+	array_push($errors, "The user has been registered.");
   }
 }
 

@@ -4,7 +4,7 @@
       </div>
         
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="require_once __DIR__ . vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script>
                 $("input").focus(function(){   
@@ -18,7 +18,7 @@
       </script>
         
         
-     <?php include'refreshTime.php'; ?>
+     <?php  require_once __DIR__ . '/refreshTime.php'; ?>
 
  
     </footer>

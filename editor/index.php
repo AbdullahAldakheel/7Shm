@@ -3,11 +3,10 @@
   session_start(); 
 
   if (!isset($_SESSION['username'])) {
-  	$_SESSION['msg'] = "You must log in first";
-
+      header('Location: ../index.php');
   }
   if (!$_SESSION['type']=="Editor") {
-	header('Location:'.$_SERVER['DOCUMENT_ROOT'].'index.php');
+	header('Location:'.$_SERVER['DOCUMENT_ROOT'].'/index.php');
 
   }
  require_once __DIR__ . '/../users/logout.php'; 
