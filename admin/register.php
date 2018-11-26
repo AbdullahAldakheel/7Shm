@@ -34,6 +34,8 @@
       
       <form method="post" action="register.php" class="formAll">
          <?php include('../users/errors.php') ?>
+          <?php include('../users/green.php') ?>
+
       
         <div>
           <label>Name    : </label>

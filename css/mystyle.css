@@ -23,3 +23,13 @@
   border-radius: 5px; 
   text-align: left;
 }
+.greenmess{
+  width: 92%; 
+  margin: 0px auto; 
+  padding: 10px; 
+  border: 1px solid #006400; 
+  color: #006400; 
+  background: #9ACD32; 
+  border-radius: 5px; 
+  text-align: left;
+}

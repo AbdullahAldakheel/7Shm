@@ -18,6 +18,12 @@ $db = mysqli_connect('a-dukhiel.com', 'adukhiel_Abo7Shm', '@Gu*c~zeM=w5', 'adukh
   	$sql = "SELECT * FROM users";
     $result = $db->query($sql);
 
-
+                    $del = $_GET['id'];
+                if($del){
+                      $userdel = "DELETE FROM users WHERE id='$del'";
+                         $t = $db->query($userdel);
+                    header('Location:'.$_SERVER['DOCUMENT_ROOT'].'admin/edit.php');
+                    	
+                }
 
 ?>

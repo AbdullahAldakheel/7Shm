@@ -3,6 +3,7 @@ session_start();
 // initializing variables
 $username = "";
 $errors = array(); 
+$green = array(); 
 
 // connect to the database
 $db = mysqli_connect('a-dukhiel.com', 'adukhiel_Abo7Shm', '@Gu*c~zeM=w5', 'adukhiel_7shm');
@@ -46,7 +47,7 @@ if (isset($_POST['reg_user'])) {
   	$query = "INSERT INTO users (username, password, type) 
   			  VALUES('$username', '$password', '$type')";
   	mysqli_query($db, $query);
-	array_push($errors, "The user has been registered.");
+	array_push($green, "The user has been registered.");
   }
 }
 

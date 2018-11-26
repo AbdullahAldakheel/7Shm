@@ -81,19 +81,13 @@ table, th, td {
     <td class="myP"><?php echo $nam ?></td>
     <td class="myH"><?php echo md5($pas) ?></td>
     <td><?php echo $row["type"] ?></td>  
-    <td button onclick="myFunction()" class="button2">Edit</td>
-    <td>  <input  class="button2" name="remove" type="submit" value="Remove"> </td>  
+    
+           <td> <a href="?edit=<?php echo $row["id"]?>"><div onclick="myFunction()" class="button2">Edit</div> </a> </td>  
+          <td> <a href="?id=<?php echo $row["id"]?>"><div  class="button2">Delete</div> </a> </td>  
   </tr>
             
     <?php
-                $num++;
-                    $num = $row["id"];
-                if(isset($_POST['remove'])){
-                      $userdel = "DELETE FROM users WHERE id='$num' ";
-                      	array_push($errors, "Removed .. ");
-                         $t = $db->query($userdel);
-                    	
-                }
+
     }
 ?>
     
