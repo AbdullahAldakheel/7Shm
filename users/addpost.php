@@ -2,7 +2,9 @@
 session_start();
 // initializing variables
 $title = "";
-$errors = array(); 
+$errors = array();
+$green = array();
+
 
 // connect to the database
 $db = mysqli_connect('a-dukhiel.com', 'adukhiel_Abo7Shm', '@Gu*c~zeM=w5', 'adukhiel_7shm');
@@ -55,13 +57,14 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     
     
   if (count($errors) == 0) {
+    $date = date("l jS \of F Y h:i:s A");
 
 
-  	$query = "INSERT INTO post (title, body, img, jname, approve) 
-  			  VALUES(' $title', '$body', '$image', '$jname', '$approve')";
+  	$query = "INSERT INTO post (title, body, img, jname, approve, date) 
+  			  VALUES(' $title', '$body', '$image', '$jname', '$approve','$date')";
   	mysqli_query($db, $query);
 
-	array_push($errors, "The post sent to the editor.");
+	array_push($green, "The post sent to the editor.");
   }
 }
 

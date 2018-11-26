@@ -35,6 +35,8 @@
       <h1 class="my-4">Add article</h1>
         
          <?php include('../users/errors.php') ?>
+         <?php include('../users/green.php') ?>
+
 
  <form  action="add.php" method="post" enctype="multipart/form-data">
 

@@ -18,7 +18,13 @@ $approve = "No";
 $sql = "SELECT * FROM post WHERE approve='$approve'";
 $result = $db->query($sql);
 
-      
+$make = $_GET['id'];
+if($make){
+    $userdel = "DELETE FROM post WHERE postid=$make";
+    $t = $db->query($userdel);
+    array_push($green, "The post has been deleted.");
+
+}
              
     
 

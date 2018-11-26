@@ -9,7 +9,7 @@ $db = mysqli_connect('a-dukhiel.com', 'adukhiel_Abo7Shm', '@Gu*c~zeM=w5', 'adukh
 }
 
 
-$approve = "No";
+$approve = "Yes";
 $sql = "SELECT * FROM post WHERE approve='$approve'";
 $result = $db->query($sql);
 

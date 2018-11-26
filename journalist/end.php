@@ -55,7 +55,7 @@
              <p><?php echo $row["comment"] ?></p>
              <p><?php echo $row["ename"] ?></p>
             <input id="myb" type="submit" class="button" value="Submit" hidden>
-            <button  type="submit" class="button" id="bt2" name="delete">Delete</button>
+             <a href="?id=<?php echo $row["postid"]?>"> <button   class="button" id="bt2" name="delete">Delete</button> </a>
                          <input type="submit" class="button" id="myb" value="Submit" hidden>
              <p name="deletenum" hidden><?php echo $tmp ?></p>
                    <div class=bbbb>
