@@ -69,8 +69,8 @@ include('../users/displayEdit.php');
                <!-- هذي الازرار -->
             <input class="com btn btn-primary button" value="Comment" type="button" href="#">
             <textarea class="area" name="field" placeholder="Write your comment here" style="width: 400px" ></textarea>
-            <input class="app btn btn-primary button" name="approve" value="Approve" type="submit"  href="#">
-            <input class="sub btn btn-primary button" name="reject" value="Submit" type="submit"  href="#">
+               <a  href="?app=<?php echo $row["postid"]?>"> <input class="app btn btn-primary button" name="approve" value="Approve" type="button" > </a>
+               <a href="?again=<?php echo $row["postid"]?>"><input class="sub btn btn-primary button" name="reject" value="Submit" type="button"  > </a> 
              <input class="cancel btn btn-primary button" value="Cancel" type="button"  href="#">
             </form>
             <!-- الى هنا -->
