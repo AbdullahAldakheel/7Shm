@@ -3,6 +3,7 @@ session_start();
 // initializing variables
 $username = "";
 $errors = array(); 
+$green = array(); 
 
 // connect to the database
 $db = mysqli_connect('a-dukhiel.com', 'adukhiel_Abo7Shm', '@Gu*c~zeM=w5', 'adukhiel_7shm');
@@ -25,5 +26,22 @@ $db = mysqli_connect('a-dukhiel.com', 'adukhiel_Abo7Shm', '@Gu*c~zeM=w5', 'adukh
                     header('Location:'.$_SERVER['DOCUMENT_ROOT'].'admin/edit.php');
                     	
                 }
+$ad = $_GET['again'];
+if(isset($_POST['change'])){
+    $user = $_POST['name'];
+    $pass = $_POST['pass'];
+    $type = $_POST['type'];
+    $place = $_POST['id2'];
+        array_push($green, $ag);
+        array_push($green, $body);
+        array_push($green, $ename);
+    $query = "UPDATE users SET username='$user', password='$pass', type='$type' WHERE id='$place'";
+      	mysqli_query($db, $query);
+    //$u = $db->query($userup);
+    array_push($green, "The user has been changed.");
+      header('Location: ../admin/edit.php');
+
+}
+
 
 ?>

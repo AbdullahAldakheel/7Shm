@@ -44,12 +44,11 @@
     <div class="container">
 
       <h1 class="my-4 text-center text-lg-left">Edit Accounts .. </h1>
-
+          <?php include('users/errors.php'); ?>
+       <?php include('users/green.php'); ?>
       <div class="row text-center text-lg-left">
           <br>      
 
-           <form  action="edit.php" method="post">
-          <?php include('../users/errors.php') ?>
           <style>
 table, th, td {
     border: 2px solid black;
@@ -72,14 +71,15 @@ table, th, td {
    <?php
     $num = 1;
         while($row = $result->fetch_array()) {
-            
+                
+
             $nam = $row["username"];
             $pas =  $row["password"];
             ?>
       <tr class="n">
-    <td> <?php echo num ?> </td>
-    <td class="myP"><?php echo $nam ?></td>
-    <td class="myH"><?php echo md5($pas) ?></td>
+    <td> <?php echo $num ?> </td>
+    <td class="myP"><?php echo $row["username"] ?></td>
+    <td class="myH"><?php echo $pas ?></td>
     <td><?php echo $row["type"] ?></td>  
     
            <td> <a href="?edit=<?php echo $row["id"]?>"><div onclick="myFunction()" class="button2">Edit</div> </a> </td>  
@@ -87,7 +87,7 @@ table, th, td {
   </tr>
             
     <?php
-
+                $num++;
     }
 ?>
     
@@ -95,8 +95,57 @@ table, th, td {
 		
 </table>
                <br>
-                <input style="float: left" type="submit" class="button button2" value="Submit"  >
-          </form>
+              
+               <?php
+                               $ed = $_GET['edit'];
+                if($ed){
+                    
+                      	$sql = "SELECT * FROM users WHERE id='$ed'";
+                    $result = $db->query($sql);
+                    $nam = "";
+                    $pas = "";
+                    $typ = "";
+                    while($row = $result->fetch_array()){
+                      $nam = $row["username"];  
+                      $pas = $row["password"]; 
+                      $typ = $row["type"];
+                    }
+                    
+               ?>
+                       
+                     <form method="post" action="../users/getusers.php" class="formAll">
+               
+
+                         <br>
+        <div>
+          <label>Name    : </label>
+          <input type="text" name="name"  class="form-control" value="<?php echo $nam ?>">  
+        </div>
+      
+        <div>
+          <label>Password: </label>
+          <input type="text" name="pass" class="form-control" value="<?php echo $pas ?>">  
+        </div>
+                            <div>
+          <label>Type: </label>
+          <input type="text" name="type" class="form-control" value="<?php echo $typ ?>">  
+        </div>
+          <br>
+        <div>
+          <input class="form-control"  type="text" name="id2" value="<?php echo $ed ?>" hidden>
+                    <p><input name="change" class="btn btn-secondary"  value="Change" type="submit" ></p>
+             
+          </div>
+
+      
+      </form>
+               
+
+<?php
+                      
+                }
+
+?>
           
         
       </div>

@@ -1,14 +1,15 @@
 
 <?php 
   session_start(); 
-
   if (!isset($_SESSION['username'])) {
-      header('Location: ../index.php');
-  }
-  if (!$_SESSION['type']=="Editor") {
-	header('Location:'.$_SERVER['DOCUMENT_ROOT'].'/index.php');
+  	$_SESSION['msg'] = "You must log in first";
 
   }
+  if (!$_SESSION['type']=="Admin") {
+	header('Location:'.$_SERVER['DOCUMENT_ROOT'].'index.php');
+
+  }
+
  require_once __DIR__ . '/../users/logout.php'; 
 include('../users/displayEdit.php');
 
@@ -21,6 +22,7 @@ include('../users/displayEdit.php');
 <?php   require_once __DIR__ . '/../source/head.php'; ?>
 
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+       <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
 
     <!-- Custom styles for this template -->
     <link href="../css/thumbnail-gallery.css" rel="stylesheet">
@@ -43,7 +45,9 @@ include('../users/displayEdit.php');
 
       <!-- Page Heading -->
       <h1 class="pad">Editor's page</h1>
-          
+                    <?php include('../users/green.php') ?>
+          <br>
+
       <!-- Project One -->
           <div class="cont">
 
@@ -65,12 +69,13 @@ include('../users/displayEdit.php');
             </div>
             <span style="margin-left: 5px">Jounalist's Name :  <?php echo $row["jname"] ?> </span>
             <br>
-           <form>
+           <form method="post" action="index.php" class="formAll">
                <!-- هذي الازرار -->
+               <textarea  class="area" name="here" placeholder="Write your comment here" style="width: 400px" hidden><?php echo $row["postid"]?></textarea>
             <input class="com btn btn-primary button" value="Comment" type="button" href="#">
-            <textarea class="area" name="field" placeholder="Write your comment here" style="width: 400px" ></textarea>
-               <a  href="?app=<?php echo $row["postid"]?>"> <input class="app btn btn-primary button" name="approve" value="Approve" type="button" > </a>
-               <a href="?again=<?php echo $row["postid"]?>"><input class="sub btn btn-primary button" name="reject" value="Submit" type="button"  > </a> 
+            <textarea  class="area" name="com" placeholder="Write your comment here" style="width: 400px" ></textarea>
+               <a class="app"  href="?app=<?php echo $row["postid"]?>"> <input class="btn btn-primary button" name="approve" value="Approve" type="button" > </a>
+               <a class="sub" href="?again=<?php echo $row["postid"]?>"><input class="btn btn-primary button" name="reject" value="Submit" type="submit"  > </a> 
              <input class="cancel btn btn-primary button" value="Cancel" type="button"  href="#">
             </form>
             <!-- الى هنا -->
@@ -83,6 +88,15 @@ include('../users/displayEdit.php');
             
     <?php
     }
+           $rowcount=mysqli_num_rows($result);
+          if($rowcount == 0){
+            ?>
+            <br>
+                <h3 class="pad">There is no post need to review.</h3>
+                <br>
+                
+              <?php  
+        }
 ?>
               
       </div>

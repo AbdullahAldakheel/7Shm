@@ -19,20 +19,14 @@ $db = mysqli_connect('a-dukhiel.com', 'adukhiel_Abo7Shm', '@Gu*c~zeM=w5', 'adukh
 if (isset($_POST['post'])) {
 
     
-    
-  // receive all input values from the form
-  $title = mysqli_real_escape_string($db, $_POST['title']);
+      $title = mysqli_real_escape_string($db, $_POST['title']);
   $body = mysqli_real_escape_string($db, $_POST['body']);
     $image = $_FILES["image"]["name"];
   $jname = $_SESSION['username'];
     $approve = "No";
-    // $target = "../img/".basename($img);
-  // form validation: ensure that the form is correctly filled ...
-  // by adding (array_push()) corresponding error unto $errors array
   if (empty($title)) { array_push($errors, "title is required"); }
   if (empty($body)) { array_push($errors, "body is required"); }
  
-// img check
        $target_dir = "../img/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -59,9 +53,9 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   if (count($errors) == 0) {
     $date = date("l jS \of F Y h:i:s A");
 
-
-  	$query = "INSERT INTO post (title, body, img, jname, approve, date) 
-  			  VALUES(' $title', '$body', '$image', '$jname', '$approve','$date')";
+      $com = "nothing";
+  	$query = "INSERT INTO post (title, body, img, jname, comment, approve, date) 
+  			  VALUES(' $title', '$body', '$image', '$jname','$com', '$approve','$date')";
   	mysqli_query($db, $query);
 
 	array_push($green, "The post sent to the editor.");

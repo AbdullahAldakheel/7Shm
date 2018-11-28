@@ -9,6 +9,8 @@
 	header('Location:'.$_SERVER['DOCUMENT_ROOT'].'index.php');
 
   }
+ require_once __DIR__ . '/../users/logout.php'; 
+
  require_once __DIR__ . '/../users/displaybefore.php'; 
 ?>
 
@@ -48,18 +50,21 @@
         </div>
         <div class="col-md-5">
             
-         <form  action="end.php"  method="post">
+         <form  action="../users/displaybefore.php"  method="post">
              
              <p id="myP" maxlength="30">title : <?php echo $row["title"] ?></p>
              <p id="myP1" onkeyup="auto_grow(this)" > <?php echo $row["body"] ?></p>
-             <p><?php echo $row["comment"] ?></p>
-             <p><?php echo $row["ename"] ?></p>
-            <input id="myb" type="submit" class="button" value="Submit" hidden>
-             <a href="?id=<?php echo $row["postid"]?>"> <button   class="button" id="bt2" name="delete">Delete</button> </a>
-                         <input type="submit" class="button" id="myb" value="Submit" hidden>
+             <p>Comment : <?php echo $row["comment"] ?></p>
+             <p>By : <?php echo $row["ename"] ?></p>
+              <input name="getid"  value="<?php echo $row["postid"] ?>" hidden>
+           
+           
+             
+              <input onclick="myFunction()" class="button bt1" type="submit" name="delteit" value="Delete">
+
              <p name="deletenum" hidden><?php echo $tmp ?></p>
                    <div class=bbbb>
-        <button onclick="myFunction()" class="button bt1">Edit</button>
+       <input onclick="myFunction()" class="button bt1" type="submit" name="goedit" value="Edit">
         <button  onclick="myFunction1()" class="button bt3" hidden>Cancel</button>
        
           </div>

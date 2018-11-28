@@ -43,8 +43,7 @@ include('../users/displayEdit.php');
 
       <!-- Page Heading -->
       <h1 class="pad">Editor's page</h1>
-                    <?php include('../users/green.php') ?>
-
+          
       <!-- Project One -->
           <div class="cont">
 
@@ -66,12 +65,12 @@ include('../users/displayEdit.php');
             </div>
             <span style="margin-left: 5px">Jounalist's Name :  <?php echo $row["jname"] ?> </span>
             <br>
-           <form method="post" action="test.php" class="formAll">>
+           <form>
                <!-- هذي الازرار -->
             <input class="com btn btn-primary button" value="Comment" type="button" href="#">
-            <textarea id="com<?php echo $row["postid"]?>" class="area" name="field" placeholder="Write your comment here" style="width: 400px" ></textarea>
-               <a class="app"  href="?app=<?php echo $row["postid"]?>"> <input class="btn btn-primary button" name="approve" value="Approve" type="button" > </a>
-               <a class="sub" href="?again=<?php echo $row["postid"]?>"><input class="btn btn-primary button" name="reject" value="Submit" type="submit"  > </a> 
+            <textarea class="area" name="field" placeholder="Write your comment here" style="width: 400px" ></textarea>
+               <a  href="?app=<?php echo $row["postid"]?>"> <input class="app btn btn-primary button" name="approve" value="Approve" type="button" > </a>
+               <a href="?again=<?php echo $row["postid"]?>"><input class="sub btn btn-primary button" name="reject" value="Submit" type="button"  > </a> 
              <input class="cancel btn btn-primary button" value="Cancel" type="button"  href="#">
             </form>
             <!-- الى هنا -->
