@@ -1,21 +1,15 @@
 <?php
 
-$db = mysqli_connect('a-dukhiel.com', 'adukhiel_Abo7Shm', '@Gu*c~zeM=w5', 'adukhiel_7shm');
-    if (!$db) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
-}
+include('connect.php');
 
 
 $approve = "Yes";
-$sql = "SELECT * FROM post WHERE approve='$approve'";
+$sql = "SELECT * FROM post WHERE approve='$approve' ORDER BY postid DESC";
 $result = $db->query($sql);
 
-      
-             
-    
+
+
+
 
 
 ?>
