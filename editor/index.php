@@ -1,11 +1,16 @@
 
 <?php 
-session_start(); 
-if (!isset($_SESSION['username'])) {
+if (!$_SESSION['type']=="Editor") {
+    header('Location: ../index.php');
 
 }
-if (!$_SESSION['type']=="Admin") {
-    header('Location:'.$_SERVER['DOCUMENT_ROOT'].'index.php');
+session_start(); 
+if (!isset($_SESSION['username'])) {
+    header('Location: ../index.php');
+
+}
+if (!$_SESSION['type']=="Editor") {
+    header('Location: ../index.php');
 
 }
 

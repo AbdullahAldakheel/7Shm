@@ -5,7 +5,7 @@ if (!isset($_SESSION['username'])) {
 
 }
 if (!$_SESSION['type']=="Journalist") {
-    header('Location:'.$_SERVER['DOCUMENT_ROOT'].'index.php');
+	    header('Location: ../index.php');
 
 }
 require_once __DIR__ . '/../users/logout.php'; 

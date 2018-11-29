@@ -14,7 +14,9 @@ $del = $_GET['id'];
 if($del){
     $userdel = "DELETE FROM users WHERE id='$del'";
     $t = $db->query($userdel);
-    header('Location:'.$_SERVER['DOCUMENT_ROOT'].'admin/edit.php');
+    array_push($green, "The user has been deleted.");
+
+    header("Refresh:0");
 
 }
 $ad = $_GET['again'];

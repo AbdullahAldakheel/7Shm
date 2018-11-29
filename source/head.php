@@ -8,6 +8,7 @@
 
 
     <title>7Shm Newspaper</title>
+    <link rel="shortcut icon" href="../img/7shm.jpg" />
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 
 
