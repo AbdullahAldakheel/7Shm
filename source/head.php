@@ -1,5 +1,5 @@
-    
-  <head>
+
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,13 +8,14 @@
 
 
     <title>7Shm Newspaper</title>
-      <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link rel="shortcut icon" href="../img/7shm.jpg" />
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 
 
-      <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/blog-home.css" rel="stylesheet">
 
-  </head>
+</head>

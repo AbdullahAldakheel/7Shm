@@ -9,9 +9,10 @@ if (!$_SESSION['type']=="Journalist") {
 
 }
 require_once __DIR__ . '/../users/logout.php'; 
+require_once __DIR__ . '/../users/displaybefore.php'; 
 ?>
 
-<?php include('../users/addpost.php') ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,8 +23,6 @@ require_once __DIR__ . '/../users/logout.php';
     <link href="Journalist Stylesheet.css" rel="stylesheet">
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/1-col-portfolio.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
-
     <body> 
 
         <?php require_once __DIR__ . '/../source/nav.php'; ?>
@@ -33,26 +32,26 @@ require_once __DIR__ . '/../users/logout.php';
         <div class="container">
 
 
-            <h1 class="my-4">Add article</h1>
+            <h1 class="my-4">Change article</h1>
 
             <?php include('../users/errors.php') ?>
             <?php include('../users/green.php') ?>
 
 
-            <form  action="add.php" method="post" enctype="multipart/form-data">
+            <form  action="../users/displaybefore.php" method="post" enctype="multipart/form-data">
 
                 Article title<br>
-                <input type="text" maxlength="30" placeholder="Insert title here" name="title">
+                <input type="text" maxlength="30" name="title" value="<?php echo $_SESSION['title'] ?>">
                 <br><br>
                 Article body 
-                <textarea onkeyup="auto_grow(this)" name="body" placeholder="Write the article here" style="width: 800px" ></textarea>
+                <textarea onkeyup="auto_grow(this)" name="body"  style="width: 800px" ><?php echo $_SESSION['body'] ?></textarea>
                 <br>
-                upload image  
-                <br /><input type="file" name="image">
+                upload image( the new one )  
+                <br /><input type="file" name="image" required>
                 <script src="upload.js"></script>
                 <br><br>
-
-                <input type="submit" class="button" value="Submit" name="post">
+                <input class="form-control"  type="text" name="id2" value="<?php echo $_SESSION['postid'] ?>" hidden>
+                <input type="submit" class="button" value="Submit" name="change1">
             </form>
             <hr>
         </div>

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3720d24-37b1-424d-af74-3b7a4f7e7e6e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../editor/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../editor/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/displayEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/displayEdit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/addpost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/displaybefore.php" beforeDir="false" afterPath="$PROJECT_DIR$/displaybefore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publish.php" beforeDir="false" afterPath="$PROJECT_DIR$/publish.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,22 +22,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="104" />
+          <entry key="php" value="180" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="104" />
+          <entry key="PHP" value="180" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="3" />
+          <entry key="php" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="3" />
+          <entry key="PHP" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -52,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/displayEdit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+            <state relative-caret-position="468">
+              <caret line="37" column="84" lean-forward="true" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -64,7 +65,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addpost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-61" />
+            <state relative-caret-position="508">
+              <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/displaybefore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/publish.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -72,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/server.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-end-line="6" />
+              <caret line="5" column="4" selection-start-line="5" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -86,7 +107,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/getusers.php" />
+        <option value="$PROJECT_DIR$/publish.php" />
+        <option value="$PROJECT_DIR$/addpost.php" />
         <option value="$PROJECT_DIR$/displayEdit.php" />
+        <option value="$PROJECT_DIR$/displaybefore.php" />
       </list>
     </option>
   </component>
@@ -96,7 +120,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
@@ -147,12 +171,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543257565300</updated>
-      <workItem from="1543257567528" duration="3560000" />
+      <workItem from="1543257567528" duration="5520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3560000" />
+    <option name="totallyTimeSpent" value="5520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1440" height="812" extended-state="0" />
@@ -193,22 +217,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addpost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-end-line="6" />
+          <caret line="5" column="4" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/publish.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addpost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/displayEdit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        <state relative-caret-position="468">
+          <caret line="37" column="84" lean-forward="true" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/displaybefore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
         </state>
       </provider>
     </entry>

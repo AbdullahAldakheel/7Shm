@@ -2,13 +2,14 @@
   session_start(); 
 
   if (!isset($_SESSION['username'])) {
-  	$_SESSION['msg'] = "You must log in first";
+      	    header('Location: ../index.php');
 
   }
-  if (!$_SESSION['type']=="Admin") {
-	header('Location:'.$_SERVER['DOCUMENT_ROOT'].'index.php');
+  if (!($_SESSION['username'])==="Admin") {
+	    header('Location: ../index.php');
 
   }
+
  require_once __DIR__ . '/../users/logout.php'; 
 ?>
 

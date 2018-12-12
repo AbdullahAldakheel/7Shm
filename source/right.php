@@ -1,76 +1,84 @@
 <div class="col-md-4">
 
-          <!-- Search Widget -->
-          <div class="card my-4">
+    <!-- Search Widget -->
+    <form  action="search.php"  method="post">
+        <div class="card my-4">
             <h5 class="card-header">Search</h5>
             <div class="card-body">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
-                </span>
-              </div>
-                
-                
-            </div>
-              
-              
-          </div>
+                <div class="input-group">
 
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Categories</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+                    <input type="text" class="form-control" placeholder="Search for..." name="bringit">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="submit" name="search">Go!</button>
+                    </span>
 
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header"> Welcome </h5>
-            <div class="card-body">
-                   <?php  if (isset($_SESSION['username'])) : ?>
-    	       <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong>  
-                   
-                   
-                   <?php  if (isset($_SESSION['type'])) : ?>
-    	       You Are a <?php echo $_SESSION['type']; ?>
-             
-                <?php endif ?>
-                
-                .
-                </p>
-                <p> <a href="index.php?logout='1'" >logout</a> </p>
-                <?php endif ?>
-                
+                </div>
+
+
             </div>
-          </div>
+
 
         </div>
+    </form>
+    <!-- Categories Widget -->
+    <div class="card my-4">
+        <h5 class="card-header"> Welcome </h5>
+        <div class="card-body">
+            <?php  if (isset($_SESSION['username'])) { ?>
+            <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong>  
+
+                <?php if($_SESSION['type']=="Admin"){
+                ?>
+
+                You Are an <strong>Admin</strong>.
+                <?php
+}
+                ?>               
+
+                <?php if($_SESSION['type']=="Editor"){
+                    include('../users/connect.php'); 
+                    $approve = "No";
+                    $notc = "Waiting for review";
+                    $sql = "SELECT * FROM post WHERE approve='$approve' AND comment='$notc'";
+                    $result = $db->query($sql);
+                ?>
+
+                You Are an <strong>Editor</strong>.
+                <br>
+                You have <?php echo mysqli_num_rows($result) ?> Posts need to review.
+                <?php
+                }
+                ?>    
+                <?php if($_SESSION['type']=="Journalist"){
+                    include('../users/connect.php'); 
+                    $approve = "No";
+                    $notc = "Waiting for review";
+                    $sql = "SELECT * FROM post WHERE approve='$approve' AND comment!='$notc'";
+                    $result = $db->query($sql);
+
+                ?>
+
+                You Are a <strong>Journalist</strong>.
+                <br>
+                You Have <?php echo mysqli_num_rows($result); ?> post has been reviewed.
+                <?php
+                }
+                ?>      
+
+                .
+            </p>
+            <p> <a href="index.php?logout='1'" >logout</a> </p>
+            <?}else{
+
+            ?>
+
+            To 7Shm newspaper, SWE381 Project.
+            <?php
+}
+            ?>
+        </div>
+    </div>
+
+
+
+</div>
